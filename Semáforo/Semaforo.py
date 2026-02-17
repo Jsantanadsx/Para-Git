@@ -1,5 +1,7 @@
 import time
+# time.sleep : tempo de espera para prosseguir.
 
+# Loop (sem break)
 while True:
     print("🟢 VERDE - Avance")
     time.sleep(5)
