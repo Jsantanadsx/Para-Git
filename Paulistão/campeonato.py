@@ -1,10 +1,12 @@
-import random
+import random # Bibilioteca para gerar números aleatórios de gols
 
 # Versão inicial.
 # Conceitos: Dicionário, Lista, Loop duplo, random, sorted(), lambda
 
 # Lista de times.
 times = ["Corinthians", "Santos", "São Paulo", "Palmeiras"]
+
+# Criação da tabela
 
 tabela = {}
 
@@ -18,13 +20,16 @@ for time in times:
         "gols_contra": 0
     }
 
-# Simulando os jogos
+# Simulando os jogos.
+# Dois loops, 1 para o primeiro time(for i in range(len(times))).
+# Para o segundo time (for j in range(i + 1, len(times))).
 for i in range(len(times)):
     for j in range(i + 1, len(times)):
 
         time1 = times[i]
         time2 = times[j]
 
+        # Quantidade aleatória de gols, de 0 a 7.
         gols1 = random.randint(0, 7)
         gols2 = random.randint(0, 7)
 
@@ -56,6 +61,9 @@ for i in range(len(times)):
             tabela[time2]["empates"] += 1
 
 # Ordena a tabela por pontos e saldo
+# sorted() organiza a tabela
+# lambda para como ordenar: 1º critério - pontos
+# 2º critério - saldo de gols = item[1]["gols_pro"] - item[1]["gols_contra"]
 classificacao = sorted(
     tabela.items(),
     key=lambda item: (item[1]["pontos"],
