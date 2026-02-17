@@ -24,18 +24,17 @@ def atualizar_tabela(tabela, time1, time2, gols1, gols2):
         tabela[time1]["empates"] += 1
         tabela[time2]["empates"] += 1
         
-    def classificar(tabela):
-
-        # Ordena a tabela por pontos e saldo
-        # sorted() organiza a tabela
-        # lambda para como ordenar: 1º critério - pontos
-        # 2º critério - saldo de gols = item[1]["gols_pro"] - item[1]["gols_contra"]
-        classificacao = sorted(
+def classificar(tabela):
+    # Ordena a tabela por pontos e saldo
+    # sorted() organiza a tabela
+    # lambda para como ordenar: 1º critério - pontos
+    # 2º critério - saldo de gols = item[1]["gols_pro"] - item[1]["gols_contra"]
+    classificacao = sorted(
         tabela.items(),
         key=lambda item: 
             (item[1]["pontos"],
             item[1]["gols_pro"] - item [1]["gols_contra"]
-        ),
-        reverse=True
-    )
-    return classificar
+    ),
+    reverse=True
+)
+    return classificacao
