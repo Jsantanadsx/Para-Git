@@ -24,6 +24,20 @@ classificacao = classificar(tabela)
 
 print("\n🏆 Classificação final\n")
 
+campeao = classificacao[0][0]
+
+print(f"{campeao} foi campeão!")
+
 for pos, (time, dados) in enumerate(classificacao, start=1):
     saldo = dados["gols_pro"] - dados["gols_contra"]
     print(f"{pos}º) {time} - {dados['pontos']} pts | SG: {saldo}")
+
+
+print("\n📉 Rebaixados:\n")
+
+# Últimos dois colocados
+rebaixado1 = classificacao[-1][0]
+rebaixado2 = classificacao[-2][0]
+
+print(f"{rebaixado2} foi rebaixado!")
+print(f"{rebaixado1} foi rebaixado!")

@@ -1,6 +1,6 @@
 # Lista de times
 
-times = ["Corinthians", "Santos", "São Paulo", "Palmeiras","Bragantino", "Portuguesa"]
+times = ["Corinthians", "Santos", "São Paulo", "Palmeiras","Bragantino", "Bragantino"]
 
 
 def criar_tabela(times):
