@@ -38,6 +38,10 @@ print("\n📉 Rebaixados:\n")
 # Últimos dois colocados
 rebaixado1 = classificacao[-1][0]
 rebaixado2 = classificacao[-2][0]
+rebaixado3 = classificacao[-3][0]
+rebaixado4 = classificacao[-4][0]
 
 print(f"{rebaixado2} foi rebaixado!")
 print(f"{rebaixado1} foi rebaixado!")
+print(f"{rebaixado3} foi rebaixado!")
+print(f"{rebaixado4} foi rebaixado!")
